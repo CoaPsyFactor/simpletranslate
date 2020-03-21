@@ -166,6 +166,12 @@ export default class SimpleTranslator {
    * Perform DOM iteration to ensure proper translating elements.
    */
   reloadTranslationElements() {
+    if (this[propTranslationElements] instanceof Array && this[propTranslationElements].length) {
+      this[propTranslationElements].forEach((_, index) => {
+        delete this[propTranslationElements][index];
+      });
+    }
+
     const translatedElements = document.querySelectorAll('[translateId]');
 
     this[propTranslationElements] = [...translatedElements].map(element => {
