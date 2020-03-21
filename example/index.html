@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Page Translator</title>
+    <script type="module" src="./main.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <input id="sectionsCount" type="number" placeholder="Number of rendering sections..." value="1" />
+        <button id="updateSections" type="button">Update Sections</button>
+        <input id="chunkSize" type="number" placeholder="Number of chunks per iteration..." value="1000" />
+        <button id="updateChunkSize" type="button">Update Chunk Size</button>
+        <select id="languageSwitch">
+            <option value="en" translateId="ENGLISH_LANGUAGE">English</option>
+            <option value="de" translateId="GERMAN_LANGUAGE">German</option>
+            <option value="rs" translateId="SERBIAN_LANGUAGE">Serbian</option>
+        </select>
+        <div id="sectionsContents"></div>
+    </div>
+</body>
+
+</html>
